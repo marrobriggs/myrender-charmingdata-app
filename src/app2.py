@@ -38,6 +38,7 @@ fig_population = px.line(x=years,
 
 # Initialize the Dash app
 app = Dash(__name__, external_stylesheets=[dbc.themes.LUX])
+server = app.server
 
 # Define Navbar
 navbar = dbc.NavbarSimple(
