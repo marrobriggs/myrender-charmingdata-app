@@ -1,3 +1,17 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import selenium
+import matplotlib.pyplot as plt
+import plotly.express as px
+import wbgapi as wb
+import numpy as np
+import dash_bootstrap_components as dbc
+from jupyter_dash import JupyterDash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+
 # Fetch the data using wbdata for Poverty Rate (SI.POV.NAHC)
 df_poverty = wb.data.DataFrame('SI.POV.NAHC', 
                                mrnev=1, 
@@ -112,5 +126,5 @@ def display_page(pathname):
 
 # Run the app
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8071)
 
